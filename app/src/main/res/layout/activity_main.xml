@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center"
+    android:background="@drawable/bacground_color"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
@@ -23,6 +24,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:text="Log In"
+                android:textColor="@android:color/white"
                 android:textAlignment="center" />
 
             <EditText
@@ -65,6 +67,8 @@
 
 
         </LinearLayout>
+
+
     </ScrollView>
 
 </LinearLayout>
