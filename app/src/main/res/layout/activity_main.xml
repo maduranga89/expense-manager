@@ -28,7 +28,7 @@
                 android:textAlignment="center" />
 
             <EditText
-                android:id="@+id/Email_Login"
+                android:id="@+id/email_login"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
@@ -39,7 +39,7 @@
                 android:padding="15dp"/>
 
             <EditText
-                android:id="@+id/Password_Login"
+                android:id="@+id/password_login"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
@@ -57,7 +57,7 @@
                 android:text="Log In"
                 android:background="@drawable/edittext_background"
                 android:textColor="@android:color/white"
-                android:id="@+id/btn_Login"/>
+                android:id="@+id/btn_login"/>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "352318432801",
+    "project_id": "expense-manager-a454e",
+    "storage_bucket": "expense-manager-a454e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:352318432801:android:498152077447d7f6606560",
+        "android_client_info": {
+          "package_name": "com.londontec.expensemanager"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "352318432801-clid4m3g7knfui02s2jfn62mdu2k12vn.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.londontec.expensemanager",
+            "certificate_hash": "916ae175fe892e20a8073cc111c2d4f28edb501d"
+          }
+        },
+        {
+          "client_id": "352318432801-f72nr3r0bj9er14l68ps2c1s8vjnr47e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyARJ43NiGpwFiLXsuLVkfHS48vkWx1n7iY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "352318432801-f72nr3r0bj9er14l68ps2c1s8vjnr47e.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
