@@ -32,13 +32,21 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                android:hint="Email" />
+                android:hint="Email"
+                android:textColor="@android:color/white"
+                android:textColorHint="@android:color/white"
+                android:background="@drawable/edittext_background"
+                android:padding="15dp"/>
 
             <EditText
                 android:id="@+id/Password_Login"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
+                android:textColor="@android:color/white"
+                android:textColorHint="@android:color/white"
+                android:background="@drawable/edittext_background"
+                android:padding="15dp"
                 android:hint="Password" />
 
             <Button
@@ -46,12 +54,15 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:text="Log In"
+                android:background="@drawable/edittext_background"
+                android:textColor="@android:color/white"
                 android:id="@+id/btn_Login"/>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:text="Forgot Password.?"
+                android:textColor="@android:color/white"
                 android:padding="5dp"
                 android:id="@+id/forgot_password"
                 />
@@ -61,6 +72,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:text="Don't have an account ? Sign up here."
+                android:textColor="@android:color/white"
                 android:padding="5dp"
                 android:id="@+id/signup_reg"
                 />
