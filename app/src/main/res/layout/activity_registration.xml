@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
     android:background="@drawable/bacground_color"
+    android:gravity="center"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".RegistrationActivity">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -23,65 +23,57 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="Log In"
-                android:textColor="@android:color/white"
-                android:textAlignment="center" />
+                android:padding="10dp"
+                android:text="Registration"
+                android:textAlignment="center"
+                android:textColor="@android:color/white" />
 
             <EditText
-                android:id="@+id/Email_Login"
+                android:id="@+id/Email_reg"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
+                android:background="@drawable/edittext_background"
                 android:hint="Email"
+                android:padding="15dp"
                 android:textColor="@android:color/white"
-                android:textColorHint="@android:color/white"
-                android:background="@drawable/edittext_background"
-                android:padding="15dp"/>
+                android:textColorHint="@android:color/white" />
 
             <EditText
-                android:id="@+id/Password_Login"
+                android:id="@+id/Password_reg"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                android:textColor="@android:color/white"
-                android:textColorHint="@android:color/white"
                 android:background="@drawable/edittext_background"
-                android:padding="15dp"
                 android:hint="Password"
-                android:inputType="textPassword"/>
+                android:inputType="textPassword"
+                android:padding="15dp"
+                android:textColor="@android:color/white"
+                android:textColorHint="@android:color/white" />
 
             <Button
+                android:id="@+id/btn_reg"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                android:text="Log In"
                 android:background="@drawable/edittext_background"
-                android:textColor="@android:color/white"
-                android:id="@+id/btn_Login"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="Forgot Password.?"
-                android:textColor="@android:color/white"
-                android:padding="5dp"
-                android:id="@+id/forgot_password"
-                />
+                android:text="Register"
+                android:textColor="@android:color/white" />
 
             <TextView
+                android:id="@+id/sign_in_here"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="Don't have an account ? Sign up here."
-                android:textColor="@android:color/white"
                 android:padding="5dp"
-                android:id="@+id/signup_reg"
-                />
+                android:text="Already have an account.? Sign in here"
+                android:textColor="@android:color/white" />
+
+            
 
 
         </LinearLayout>
-
-
     </ScrollView>
+
 
 </LinearLayout>
