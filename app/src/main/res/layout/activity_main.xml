@@ -18,12 +18,52 @@
             android:gravity="center"
             android:orientation="vertical">
 
-            <TextureView
+            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Log In"
                 android:layout_gravity="center"
+                android:text="Log In"
+                android:textAlignment="center" />
+
+            <EditText
+                android:id="@+id/Email_Login"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:hint="Email" />
+
+            <EditText
+                android:id="@+id/Password_Login"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:hint="Password" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="Log In"
+                android:id="@+id/btn_Login"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Forgot Password.?"
+                android:padding="5dp"
+                android:id="@+id/forgot_password"
                 />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Don't have an account ? Sign up here."
+                android:padding="5dp"
+                android:id="@+id/signup_reg"
+                />
+
+
         </LinearLayout>
     </ScrollView>
 
