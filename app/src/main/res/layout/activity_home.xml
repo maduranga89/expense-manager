@@ -24,7 +24,9 @@
         android:layout_gravity="start"
         android:id="@+id/naView"
         android:fitsSystemWindows="true"
+        app:menu="@menu/navmenu"
         app:itemTextAppearance="?android:textAppearanceSmall"
+        app:headerLayout="@layout/nav_header"
         app:itemIconTint="@color/toolbar_color"/>
 
 </androidx.drawerlayout.widget.DrawerLayout>
