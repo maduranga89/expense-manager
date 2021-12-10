@@ -18,7 +18,7 @@ public class RegistrationActivity extends AppCompatActivity {
     private TextView mSignin;
 
     //Firebase Integration
-    private FireBaseAuth
+//    private FireBaseAuth
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
