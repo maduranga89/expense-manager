@@ -63,7 +63,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:text="Forgot Password.?"
-                android:textColor="@android:color/white"
+                android:textColor="@android:color/black"
                 android:padding="5dp"
                 android:id="@+id/forgot_password"
                 />
@@ -73,7 +73,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:text="Don't have an account ? Sign up here."
-                android:textColor="@android:color/white"
+                android:textColor="@android:color/black"
                 android:padding="5dp"
                 android:id="@+id/signup_reg"
                 />
