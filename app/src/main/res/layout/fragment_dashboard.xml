@@ -75,10 +75,10 @@
                     android:gravity="center">
 
                     <TextView
+                        android:id="@+id/income_set_result"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="0000.00"
-                        android:id="@+id/income_set_result"
                         android:textAppearance="?android:textAppearanceLarge"
                         android:textColor="@android:color/holo_blue_light">
 
@@ -94,10 +94,10 @@
                     android:gravity="center">
 
                     <TextView
+                        android:id="@+id/Expense_set_result"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="0000.00"
-                        android:id="@+id/Expense_set_result"
                         android:textAppearance="?android:textAppearanceLarge"
                         android:textColor="@android:color/holo_red_dark">
 
@@ -117,6 +117,52 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="Income"
+                    android:textAppearance="?android:textAppearanceLarge">
+
+
+                </TextView>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/recycler_income">
+
+                </androidx.recyclerview.widget.RecyclerView>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Expense:"
+                    android:textAppearance="?android:textAppearanceLarge"
+                    android:padding="10dp"
+                    >
+
+                </TextView>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/recycler_expense">
+
+                </androidx.recyclerview.widget.RecyclerView>
+
+            </LinearLayout>
+        </ScrollView>
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -127,32 +173,31 @@
 
 
             <TextView
+                android:id="@+id/expense_ft_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Expense"
-                android:id="@+id/expense_ft_text"
-                android:padding="5dp"
-                android:textColor="@android:color/white"
-                android:background="@color/nav_header"
                 android:layout_gravity="center"
                 android:layout_marginRight="5dp"
-                android:visibility="invisible"
-                android:textAppearance="?android:textAppearanceSmall">
+                android:background="@color/nav_header"
+                android:padding="5dp"
+                android:text="Expense"
+                android:textAppearance="?android:textAppearanceSmall"
+                android:textColor="@android:color/white"
+                android:visibility="invisible">
 
             </TextView>
-            
+
             <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/expense_ft_btn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/expense_ft_btn"
                 android:layout_gravity="bottom|end"
                 android:backgroundTint="#DF9B36"
                 android:elevation="6dp"
-                app:fabSize="mini"
-                android:visibility="invisible"
-                app:pressedTranslationZ="12dp"
                 android:src="@drawable/expense"
-                >
+                android:visibility="invisible"
+                app:fabSize="mini"
+                app:pressedTranslationZ="12dp">
 
 
             </com.google.android.material.floatingactionbutton.FloatingActionButton>
@@ -169,30 +214,29 @@
             >
 
             <TextView
+                android:id="@+id/income_ft_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Income"
-                android:id="@+id/income_ft_text"
-                android:textColor="@android:color/white"
-                android:padding="5dp"
-                android:background="@color/nav_header"
                 android:layout_gravity="center"
                 android:layout_marginRight="5dp"
-                android:visibility="invisible"
-                android:textAppearance="?android:textAppearanceSmall"/>
+                android:background="@color/nav_header"
+                android:padding="5dp"
+                android:text="Income"
+                android:textAppearance="?android:textAppearanceSmall"
+                android:textColor="@android:color/white"
+                android:visibility="invisible" />
 
             <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/income_ft_btn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/income_ft_btn"
                 android:layout_gravity="bottom|end"
                 android:backgroundTint="#773FF40C"
                 android:elevation="6dp"
-                app:fabSize="mini"
-                app:pressedTranslationZ="12dp"
+                android:src="@drawable/income"
                 android:visibility="invisible"
-                android:src="@drawable/income">
-
+                app:fabSize="mini"
+                app:pressedTranslationZ="12dp">
 
 
             </com.google.android.material.floatingactionbutton.FloatingActionButton>
@@ -201,16 +245,15 @@
         </LinearLayout>
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:layout_width="wrap_content"
             android:id="@+id/fb_main_plus_btn"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom|end"
-            android:layout_marginBottom="16dp"
             android:layout_marginRight="20dp"
+            android:layout_marginBottom="16dp"
             android:backgroundTint="#77E708FF"
-            app:fabSize="normal"
             android:src="@drawable/income"
-            />
+            app:fabSize="normal" />
 
 
     </androidx.coordinatorlayout.widget.CoordinatorLayout>

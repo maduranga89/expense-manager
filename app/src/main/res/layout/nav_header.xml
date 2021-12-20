@@ -15,7 +15,6 @@
         android:text="Expense Manager"
         android:textAppearance="?android:textAppearanceMedium"
         android:textColor="@color/white">
-        ">
 
     </TextView>
 
