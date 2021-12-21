@@ -6,7 +6,7 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottomnavigation_bar"
+        android:id="@+id/bottomNavigationBar"
         android:layout_width="match_parent"
         android:layout_height="56dp"
         app:menu="@menu/bottommenu"

@@ -8,22 +8,22 @@
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
     tools:openDrawer="start"
-    tools:context="com.londontec.expensemanager.HomeActivity">
+    tools:context=".HomeActivity">
 
-    <include layout="@layout/appbar_layout"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-    </include>
+    <include
+        layout="@layout/appbar_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"></include>
 
     <com.google.android.material.navigation.NavigationView
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="start"
-        android:id="@+id/naView"
         android:fitsSystemWindows="true"
-        app:menu="@menu/navmenu"
         app:itemTextAppearance="?android:textAppearanceSmall"
+        android:id="@+id/naView"
         app:headerLayout="@layout/nav_header"
+        app:menu="@menu/navmenu"
         app:itemIconTint="@color/toolbar_color"/>
 
 </androidx.drawerlayout.widget.DrawerLayout>
