@@ -76,7 +76,7 @@
                 android:id="@+id/amount_txt_expense"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="600000"
+                android:text="600,000.00"
                 android:textAppearance="?android:textAppearanceSmall"
                 android:textColor="@color/expense_color"
                 android:textStyle="bold">

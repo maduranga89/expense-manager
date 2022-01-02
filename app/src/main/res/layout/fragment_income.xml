@@ -10,7 +10,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:elevation="10dp"
-
         app:cardElevation="5dp">
 
         <LinearLayout
@@ -49,13 +48,12 @@
                 android:gravity="center">
 
                 <TextView
+                    android:id="@+id/income_txt_result"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/income_txt_result"
+                    android:text="000,000.00"
                     android:textAppearance="?android:textAppearanceMedium"
-                    android:textColor="@android:color/black"
-                    android:text="000000.00"
-                    >
+                    android:textColor="@android:color/black">
 
 
                 </TextView>
