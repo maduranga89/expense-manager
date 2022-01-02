@@ -27,7 +27,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
     ExpenseFragment expenseFragment;
     HelpFragment helpFragment;
     AboutFragment aboutFragment;
-
+    InsertDataFragment insertDataFragment;
 
     private DrawerLayout drawerLayout;
     private BottomNavigationView bottomNavigationView;
@@ -65,6 +65,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         expenseFragment = new ExpenseFragment();
         helpFragment = new HelpFragment();
         aboutFragment = new AboutFragment();
+        insertDataFragment = new InsertDataFragment();
 
         setFragment(dashboardFragment);
 
