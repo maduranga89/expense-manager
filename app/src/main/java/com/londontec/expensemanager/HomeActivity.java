@@ -25,6 +25,9 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
     DashboardFragment dashboardFragment;
     IncomeFragment incomeFragment;
     ExpenseFragment expenseFragment;
+    HelpFragment helpFragment;
+    AboutFragment aboutFragment;
+
 
     private DrawerLayout drawerLayout;
     private BottomNavigationView bottomNavigationView;
@@ -60,6 +63,8 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         dashboardFragment = new DashboardFragment();
         incomeFragment = new IncomeFragment();
         expenseFragment = new ExpenseFragment();
+        helpFragment = new HelpFragment();
+        aboutFragment = new AboutFragment();
 
         setFragment(dashboardFragment);
 
@@ -79,15 +84,6 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
                     case R.id.expense:
                         setFragment(expenseFragment);
                         bottomNavigationView.setItemBackgroundResource(R.color.expense_color);
-                        break;
-                    case R.id.help:
-
-                        break;
-                    case R.id.about:
-
-                        break;
-                    case R.id.logout:
-
                         break;
                     default:
                         break;
@@ -125,12 +121,14 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
                 fragment = new ExpenseFragment();
                 break;
             case R.id.help:
+                fragment = new HelpFragment();
                 break;
             case R.id.about:
+                fragment=new AboutFragment();
                 break;
             case R.id.logout:
                 mAuth.signOut();
-                startActivity(new Intent(getApplicationContext(),MainActivity.class));
+                startActivity(new Intent(getApplicationContext(), MainActivity.class));
                 break;
         }
         if (fragment != null) {
