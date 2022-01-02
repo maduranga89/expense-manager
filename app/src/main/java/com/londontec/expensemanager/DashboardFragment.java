@@ -12,17 +12,22 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.Fragment;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.londontec.expensemanager.model.Data;
 
 import java.text.DateFormat;
+import java.text.NumberFormat;
 import java.util.Date;
 
 
@@ -42,6 +47,10 @@ public class DashboardFragment extends Fragment {
     private Animation fadeOpen, fadeClose;
     private DatabaseReference mIncomeDatabase;
     private DatabaseReference mExpenseDatabase;
+
+    // Dashboard Income & Expense
+    private TextView totalIncomeTextResult;
+    private TextView totalExpenseTextResult;
 
 
     @Override
@@ -64,6 +73,10 @@ public class DashboardFragment extends Fragment {
         // Connect floating text
         fab_income_txt = myView.findViewById(R.id.income_ft_text);
         fab_expense_txt = myView.findViewById(R.id.expense_ft_text);
+
+        // Total Income Expenses
+        totalIncomeTextResult = myView.findViewById(R.id.income_set_result);
+        totalExpenseTextResult = myView.findViewById(R.id.expense_set_result);
 
         //Animation
         fadeOpen = AnimationUtils.loadAnimation(getActivity(), R.anim.fade_open);
@@ -96,6 +109,44 @@ public class DashboardFragment extends Fragment {
                 }
             }
         });
+
+        //Calculate total income
+        mIncomeDatabase.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                int totalIncome = 0;
+                for (DataSnapshot mysnapshot : snapshot.getChildren()) {
+                    Data data = mysnapshot.getValue(Data.class);
+                    totalIncome += data.getAmount();
+                }
+                totalIncomeTextResult.setText(NumberFormat.getInstance().format(totalIncome));
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+       
+        //Calculate total Expense 
+        mExpenseDatabase.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                int totalExpense = 0;
+                for (DataSnapshot mysnapshot : snapshot.getChildren()) {
+                    Data data = mysnapshot.getValue(Data.class);
+                    totalExpense += data.getAmount();
+                }
+                totalExpenseTextResult.setText(NumberFormat.getInstance().format(totalExpense));
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
+        
         return myView;
     }
 
