@@ -1,5 +1,6 @@
 package com.londontec.expensemanager;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.FrameLayout;
@@ -14,7 +15,9 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.navigation.NavigationBarView;
 import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class HomeActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -26,6 +29,8 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
     private DrawerLayout drawerLayout;
     private BottomNavigationView bottomNavigationView;
     private FrameLayout frameLayout;
+
+    private FirebaseAuth mAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,6 +51,9 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         NavigationView navigationView = findViewById(R.id.naView);
         navigationView.setNavigationItemSelectedListener(this);
 
+        mAuth = FirebaseAuth.getInstance();
+
+
         bottomNavigationView = findViewById(R.id.bottomNavigationBar);
         frameLayout = findViewById(R.id.main_frame);
 
@@ -55,9 +63,10 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
 
         setFragment(dashboardFragment);
 
-        bottomNavigationView.setOnNavigationItemReselectedListener(new BottomNavigationView.OnNavigationItemReselectedListener() {
+        bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
+
             @Override
-            public void onNavigationItemReselected(@NonNull MenuItem item) {
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()) {
                     case R.id.dashboard:
                         setFragment(dashboardFragment);
@@ -71,9 +80,19 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
                         setFragment(expenseFragment);
                         bottomNavigationView.setItemBackgroundResource(R.color.expense_color);
                         break;
+                    case R.id.help:
+
+                        break;
+                    case R.id.about:
+
+                        break;
+                    case R.id.logout:
+
+                        break;
                     default:
                         break;
                 }
+                return false;
             }
         });
     }
@@ -104,6 +123,14 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
                 break;
             case R.id.expense:
                 fragment = new ExpenseFragment();
+                break;
+            case R.id.help:
+                break;
+            case R.id.about:
+                break;
+            case R.id.logout:
+                mAuth.signOut();
+                startActivity(new Intent(getApplicationContext(),MainActivity.class));
                 break;
         }
         if (fragment != null) {
