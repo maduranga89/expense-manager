@@ -9,6 +9,9 @@
     <string name="help_fragment">Help Page</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-
+<string name="about">
+    Expense Manager App is an amazing app for controlling or tracking all the expenses by considering your income.\n
+    It’s best suitable for those persons who worried about their expenses and they have not control in money for saving it.
+</string>
 
 </resources>

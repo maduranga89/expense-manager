@@ -6,9 +6,23 @@
     tools:context=".AboutFragment">
 
     <!-- TODO: Update blank fragment layout -->
+
+
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/about_fragment" />
+        android:layout_height="wrap_content"
+        android:text="About"
 
+        android:layout_marginBottom="15dp"
+        android:textAppearance="@android:color/black"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="3dp"
+        android:text="@string/about">
+
+    </TextView>
 </FrameLayout>
