@@ -129,7 +129,7 @@
                     android:layout_weight="2">
 
                     <EditText
-                        android:id="@+id/Note_edt"
+                        android:id="@+id/note_edt"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="Note">

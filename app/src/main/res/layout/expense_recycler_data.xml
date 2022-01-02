@@ -78,7 +78,7 @@
                 android:layout_height="wrap_content"
                 android:text="600000"
                 android:textAppearance="?android:textAppearanceSmall"
-                android:textColor="@color/expense_amount_color"
+                android:textColor="@color/expense_color"
                 android:textStyle="bold">
 
             </TextView>
